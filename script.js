@@ -78,15 +78,18 @@ function addReposToCard(repos) {
         })
 }
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
+// script.js
+const searchButton = document.getElementById('searchButton');
+// const search = document.getElementById('search');
 
-    const user = search.value
+searchButton.addEventListener('click', () => {
+  const user = search.value;
 
-    if(user) {
-        getUser(user)
-
-        search.value = ''
-    }
+  if (user) {
+    getUser(user);
+    search.value = '';
+  }
 })
+
+
 
